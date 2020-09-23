@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import MyComponent from "./MyComponent"
+import DiscreteSlider from "./DiscreteSlider"
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyComponent />
+    <DiscreteSlider />
   </React.StrictMode>,
   document.getElementById("root")
 )

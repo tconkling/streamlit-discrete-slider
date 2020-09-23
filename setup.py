@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-custom-component",
+    name="streamlit-discrete-slider",
     version="0.0.1",
     author="",
     author_email="",
