@@ -3,7 +3,7 @@ import os
 import streamlit as st
 import streamlit.components.v1 as components
 
-_RELEASE = True
+_RELEASE = False
 
 if _RELEASE:
     root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +21,7 @@ else:
 
 
 def discrete_slider(options, key=None):
-    return _discrete_slider(options=options, key=key, default=0)
+    return _discrete_slider(options=options, key=key, default=options[0])
 
 
 if not _RELEASE:
