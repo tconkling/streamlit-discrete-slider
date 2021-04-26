@@ -13,6 +13,8 @@ function createMarks(labels: string[]): any[] {
 }
 
 class DiscreteSlider extends StreamlitComponentBase {
+  state = { value: 0 }
+
   public render = (): ReactNode => {
     const vMargin = 7
     const hMargin = 20
@@ -27,6 +29,7 @@ class DiscreteSlider extends StreamlitComponentBase {
     return (
       <StyledSlider
         defaultValue={0}
+        value={this.state.value}
         min={0}
         max={options.length - 1}
         aria-labelledby="discrete-slider-restrict"
@@ -36,6 +39,7 @@ class DiscreteSlider extends StreamlitComponentBase {
         onChangeCommitted={(event, value) => {
           const selectedOption = options[Number(value)]
           Streamlit.setComponentValue(selectedOption)
+          this.setState({ value })
         }}
         disabled={this.props.disabled}
       />
